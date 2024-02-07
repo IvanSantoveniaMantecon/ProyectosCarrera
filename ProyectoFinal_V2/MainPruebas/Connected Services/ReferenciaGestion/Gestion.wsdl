@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Gestion" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49343/Gestion.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49343/Gestion.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49343/Gestion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Negocio" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGestion_añadirJugador_InputMessage">
+    <wsdl:part name="parameters" element="tns:añadirJugador" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_añadirJugador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:añadirJugadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_verListaJugadores_InputMessage">
+    <wsdl:part name="parameters" element="tns:verListaJugadores" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_verListaJugadores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verListaJugadoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_bajaJugador_InputMessage">
+    <wsdl:part name="parameters" element="tns:bajaJugador" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_bajaJugador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bajaJugadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_añadirEquipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:añadirEquipo" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_añadirEquipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:añadirEquipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_bajaEquipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:bajaEquipo" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_bajaEquipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bajaEquipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_verListaEquipos_InputMessage">
+    <wsdl:part name="parameters" element="tns:verListaEquipos" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_verListaEquipos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verListaEquiposResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_verJugadoresEquipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:verJugadoresEquipo" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_verJugadoresEquipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verJugadoresEquipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_hacerJsonJugadores_InputMessage">
+    <wsdl:part name="parameters" element="tns:hacerJsonJugadores" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_hacerJsonJugadores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:hacerJsonJugadoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_hacerJsonEquipos_InputMessage">
+    <wsdl:part name="parameters" element="tns:hacerJsonEquipos" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_hacerJsonEquipos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:hacerJsonEquiposResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_recuperarDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarDatos" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_recuperarDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_recuperarDatosEquipos_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarDatosEquipos" />
+  </wsdl:message>
+  <wsdl:message name="IGestion_recuperarDatosEquipos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarDatosEquiposResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGestion">
+    <wsdl:operation name="añadirJugador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/añadirJugador" message="tns:IGestion_añadirJugador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/añadirJugadorResponse" message="tns:IGestion_añadirJugador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verListaJugadores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/verListaJugadores" message="tns:IGestion_verListaJugadores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/verListaJugadoresResponse" message="tns:IGestion_verListaJugadores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bajaJugador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/bajaJugador" message="tns:IGestion_bajaJugador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/bajaJugadorResponse" message="tns:IGestion_bajaJugador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="añadirEquipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/añadirEquipo" message="tns:IGestion_añadirEquipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/añadirEquipoResponse" message="tns:IGestion_añadirEquipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bajaEquipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/bajaEquipo" message="tns:IGestion_bajaEquipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/bajaEquipoResponse" message="tns:IGestion_bajaEquipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verListaEquipos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/verListaEquipos" message="tns:IGestion_verListaEquipos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/verListaEquiposResponse" message="tns:IGestion_verListaEquipos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verJugadoresEquipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/verJugadoresEquipo" message="tns:IGestion_verJugadoresEquipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/verJugadoresEquipoResponse" message="tns:IGestion_verJugadoresEquipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="hacerJsonJugadores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/hacerJsonJugadores" message="tns:IGestion_hacerJsonJugadores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/hacerJsonJugadoresResponse" message="tns:IGestion_hacerJsonJugadores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="hacerJsonEquipos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/hacerJsonEquipos" message="tns:IGestion_hacerJsonEquipos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/hacerJsonEquiposResponse" message="tns:IGestion_hacerJsonEquipos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/recuperarDatos" message="tns:IGestion_recuperarDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/recuperarDatosResponse" message="tns:IGestion_recuperarDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatosEquipos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestion/recuperarDatosEquipos" message="tns:IGestion_recuperarDatosEquipos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestion/recuperarDatosEquiposResponse" message="tns:IGestion_recuperarDatosEquipos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGestion" type="tns:IGestion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="añadirJugador">
+      <soap:operation soapAction="http://tempuri.org/IGestion/añadirJugador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verListaJugadores">
+      <soap:operation soapAction="http://tempuri.org/IGestion/verListaJugadores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bajaJugador">
+      <soap:operation soapAction="http://tempuri.org/IGestion/bajaJugador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="añadirEquipo">
+      <soap:operation soapAction="http://tempuri.org/IGestion/añadirEquipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bajaEquipo">
+      <soap:operation soapAction="http://tempuri.org/IGestion/bajaEquipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verListaEquipos">
+      <soap:operation soapAction="http://tempuri.org/IGestion/verListaEquipos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verJugadoresEquipo">
+      <soap:operation soapAction="http://tempuri.org/IGestion/verJugadoresEquipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hacerJsonJugadores">
+      <soap:operation soapAction="http://tempuri.org/IGestion/hacerJsonJugadores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hacerJsonEquipos">
+      <soap:operation soapAction="http://tempuri.org/IGestion/hacerJsonEquipos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatos">
+      <soap:operation soapAction="http://tempuri.org/IGestion/recuperarDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDatosEquipos">
+      <soap:operation soapAction="http://tempuri.org/IGestion/recuperarDatosEquipos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Gestion">
+    <wsdl:port name="BasicHttpBinding_IGestion" binding="tns:BasicHttpBinding_IGestion">
+      <soap:address location="http://localhost:49343/Gestion.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

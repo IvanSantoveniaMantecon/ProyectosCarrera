@@ -1,0 +1,9 @@
+C:\Users\ivans\source\repos\ProyectoFinal_V2\Negocio\bin\Debug\Negocio.dll
+C:\Users\ivans\source\repos\ProyectoFinal_V2\Negocio\bin\Debug\Negocio.pdb
+C:\Users\ivans\source\repos\ProyectoFinal_V2\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\ivans\source\repos\ProyectoFinal_V2\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\ivans\source\repos\ProyectoFinal_V2\Negocio\obj\Debug\Negocio.dll
+C:\Users\ivans\source\repos\ProyectoFinal_V2\Negocio\obj\Debug\Negocio.pdb
+C:\Users\ivans\source\repos\ProyectoFinal_V2\Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ivans\source\repos\ProyectoFinal_V2\Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ivans\source\repos\ProyectoFinal_V2\Negocio\obj\Debug\Negocio.csproj.CopyComplete
